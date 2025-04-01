@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/pokemons.dir/main.cpp.o CMakeFiles/pokemons.dir/src/Pokemon.cpp.o CMakeFiles/pokemons.dir/src/Team.cpp.o CMakeFiles/pokemons.dir/src/Trainer.cpp.o -o pokemons 
