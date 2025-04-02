@@ -1,7 +1,8 @@
 #ifndef TRAINER_H
 #define TRAINER_H
 
-#include "string"
+#include <string>
+#include "iostream"
 #include "Team.h"
 
 class Trainer
@@ -30,6 +31,21 @@ class Trainer
 
         head = nullptr;
         tail = nullptr;
+    }
+
+    friend std::ostream& operator<<(std::ostream& os, const Trainer& tr)
+    {
+        TeamNode* cur = tr.head;
+        os << "Trainer: " << tr.name << " teams: ";
+        while (cur)
+        {
+            os << cur->data.getName();
+            cur = cur->next;
+            if (cur)
+                os << ", ";
+        }
+        os << std::endl;
+        return os;
     }
 };
 
