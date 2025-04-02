@@ -19,10 +19,10 @@ void Trainer::addTeam(Team &t)
     }
 }
 
-void Team::addPokemon(const std::string& teamName)
+void Trainer::addTeam(const std::string& teamName)
 {
     Team t(teamName);
-    addPokemon(t);
+    addTeam(t);
 }
 
 Team& Trainer::operator[](const std::string& teamName)
@@ -36,6 +36,25 @@ Team& Trainer::operator[](const std::string& teamName)
     }
 
     throw std::runtime_error("Team not found");
+}
+
+void Trainer::printEmptyTeams() const
+{
+    TeamNode *cur = head;
+
+    if (!cur)
+        return;
+
+    std::cout << "Trainer: " << name << " teams (empty): ";
+    while (cur)
+    {
+        if (cur->data.isEmpty())
+            std::cout << cur->data.getName();
+        cur = cur->next;
+        if (cur)
+            std::cout << ", ";
+    }
+    std::cout << std::endl;
 }
 
 void Trainer::printTeams() const
