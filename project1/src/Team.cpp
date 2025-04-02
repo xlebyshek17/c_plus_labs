@@ -19,6 +19,12 @@ void Team::addPokemon(Pokemon& p)
     }
 }
 
+void Team::addPokemon(const std::string& teamName)
+{
+    Team t(teamName);
+    addPokemon(t);
+}
+
 void Team::removePokemon(std::string name)
 {
     PokemonNode* cur = head;
