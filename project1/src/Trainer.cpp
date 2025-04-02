@@ -19,11 +19,23 @@ void Trainer::addTeam(Team &t)
     }
 }
 
-
 void Team::addPokemon(const std::string& teamName)
 {
     Team t(teamName);
     addPokemon(t);
+}
+
+Team& Trainer::operator[](const std::string& teamName)
+{
+    TeamNode* cur = head;
+    while (cur)
+    {
+        if (cur->data.getName() == teamName)
+            return cur->data;
+        cur = cur->next;
+    }
+
+    throw std::runtime_error("Team not found");
 }
 
 void Trainer::printTeams() const

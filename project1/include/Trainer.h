@@ -15,6 +15,7 @@ class Trainer
 
     void addTeam(Team &team);
     void addTeam(const std::string& teamName);
+    Team& operator[](const std::string& teamName);
     void printTeams() const;
 
     ~Trainer()
