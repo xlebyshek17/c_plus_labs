@@ -72,7 +72,7 @@ void Team::printPokemonsBackward() const
     }
 }
 
-Pokemon& Team::operator[](int index) const 
+Pokemon Team::operator[](int index) const 
 {
     PokemonNode *cur = head;
     int count = 0;
@@ -80,7 +80,7 @@ Pokemon& Team::operator[](int index) const
     while(cur)
     {
         if (count++ == index)
-            return cur->data;
+            return Pokemon(cur->data.getName());
         cur = cur->next;
     }
 

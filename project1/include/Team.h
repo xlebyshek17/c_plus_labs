@@ -16,7 +16,7 @@ class Team
 
     void addPokemon(Pokemon& p);
     void removePokemon(std::string name);
-    Pokemon& operator[](int index) const;
+    Pokemon operator[](int index) const;
     void printPokemonsForward() const;
     void printPokemonsBackward() const;
     std::string getName() { return name; }

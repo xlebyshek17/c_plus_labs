@@ -45,7 +45,6 @@ class Trainer
             if (cur)
                 os << ", ";
         }
-        os << std::endl;
         return os;
     }
 };

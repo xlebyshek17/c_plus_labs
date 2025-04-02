@@ -51,8 +51,6 @@ void Trainer::printEmptyTeams() const
         if (cur->data.isEmpty())
             std::cout << cur->data.getName();
         cur = cur->next;
-        if (cur)
-            std::cout << ", ";
     }
     std::cout << std::endl;
 }
