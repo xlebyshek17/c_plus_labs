@@ -67,15 +67,15 @@ int main() {
     Pokemon p3 = hoenn[0]; // UWAGA: Pokémon p3 NIE należy do Hoenn Team
     p3.printInfo();
 
-    auto printMsgDefaultConstructible = [](const std::string& className, bool isDefaultConstr) {
-        std::cout << "Is " << className << " default constructible? " 
-                  << std::boolalpha << isDefaultConstr << std::endl;
-    };
+    // auto printMsgDefaultConstructible = [](const std::string& className, bool isDefaultConstr) {
+    //     std::cout << "Is " << className << " default constructible? " 
+    //               << std::boolalpha << isDefaultConstr << std::endl;
+    // };
 
-    printMsgDefaultConstructible("Pokeball", std::is_trivially_default_constructible<Pokeball>::value);
-    printMsgDefaultConstructible("UltraBall", std::is_trivially_default_constructible<UltraBall>::value);
-    printMsgDefaultConstructible("GreatBall", std::is_trivially_default_constructible<GreatBall>::value);
-    printMsgDefaultConstructible("GreatBall", std::is_default_constructible<GreatBall>::value); // Jaka jest różnica względem is_trivially_default_constructible?
+    // printMsgDefaultConstructible("Pokeball", std::is_trivially_default_constructible<Pokeball>::value);
+    // printMsgDefaultConstructible("UltraBall", std::is_trivially_default_constructible<UltraBall>::value);
+    // printMsgDefaultConstructible("GreatBall", std::is_trivially_default_constructible<GreatBall>::value);
+    // printMsgDefaultConstructible("GreatBall", std::is_default_constructible<GreatBall>::value); // Jaka jest różnica względem is_trivially_default_constructible?
 
     return 0;
 }
