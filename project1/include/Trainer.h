@@ -7,15 +7,6 @@
 class Trainer
 {
   private:
-    struct TeamNode
-    {
-        TeamNode *next;
-        TeamNode *prev;
-        Team data;
-
-        TeamNode(Team &t) : data(t), next(nullptr), prev(nullptr) {}
-    };
-
     std::string name;
     TeamNode *head;
     TeamNode *tail;

@@ -36,4 +36,13 @@ class Team
     }
 };
 
+struct TeamNode
+{
+    TeamNode *next;
+    TeamNode *prev;
+    Team data;
+
+    TeamNode(Team &t) : data(t), next(nullptr), prev(nullptr) {}
+};
+
 #endif // !TEAM_H
