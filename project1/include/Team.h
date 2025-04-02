@@ -20,6 +20,7 @@ class Team
     void printPokemonsForward() const;
     void printPokemonsBackward() const;
     std::string getName() { return name; }
+    bool isEmpty() { return head == nullptr; }
 
     ~Team() 
     {
