@@ -7,15 +7,6 @@
 class Team
 {
   private:
-    struct PokemonNode 
-    {
-        PokemonNode *next;
-        PokemonNode *prev;
-        Pokemon data; 
-        
-        PokemonNode(const Pokemon& p) : data(p), next(nullptr), prev(nullptr) {}
-    };
-
     std::string name;
     PokemonNode *head;
     PokemonNode *tail;

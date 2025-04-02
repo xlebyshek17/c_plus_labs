@@ -17,4 +17,13 @@ class Pokemon
     std::string getName() const { return name; }
 };
 
+struct PokemonNode 
+{
+    PokemonNode *next;
+    PokemonNode *prev;
+    Pokemon data; 
+        
+    PokemonNode(const Pokemon& p) : data(p), next(nullptr), prev(nullptr) {}
+};
+
 #endif
