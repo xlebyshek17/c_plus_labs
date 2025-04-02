@@ -14,6 +14,7 @@ class Trainer
     Trainer(const std::string& _name): name(_name), head(nullptr), tail(nullptr) {}
 
     void addTeam(Team &team);
+    void addTeam(const std::string& teamName);
     void printTeams() const;
 
     ~Trainer()

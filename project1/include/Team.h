@@ -15,7 +15,6 @@ class Team
     Team(const std::string& _name) : name(_name), head(nullptr), tail(nullptr) {}
 
     void addPokemon(Pokemon& p);
-    void addPokemon(const std::string& teamName);
     void removePokemon(std::string name);
     Pokemon& operator[](int index) const;
     void printPokemonsForward() const;

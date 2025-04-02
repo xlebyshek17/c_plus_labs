@@ -19,6 +19,13 @@ void Trainer::addTeam(Team &t)
     }
 }
 
+
+void Team::addPokemon(const std::string& teamName)
+{
+    Team t(teamName);
+    addPokemon(t);
+}
+
 void Trainer::printTeams() const
 {
     TeamNode *cur = head;
